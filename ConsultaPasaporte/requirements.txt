@@ -1,0 +1,2 @@
+selenium==4.10.0  # Especifica la versión de Selenium que estás utilizando
+webdriver-manager==4.0.0  # Opcional: Gestiona los drivers automáticamente

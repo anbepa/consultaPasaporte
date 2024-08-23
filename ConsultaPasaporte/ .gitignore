@@ -1,0 +1,24 @@
+# Ignorar entornos virtuales
+venv/
+
+# Ignorar archivos de configuración de entorno específico
+.idea/
+*.iml
+
+# Ignorar archivos compilados de Python
+__pycache__/
+*.py[cod]
+
+# Ignorar archivos temporales o de caché
+*.log
+*.tmp
+*.swp
+
+
+# Ignorar archivos de configuración específicos de la plataforma
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de configuración de GitHub Copilot (si no quieres compartirlos)
+Welcome to GitHub Copilot/
+
