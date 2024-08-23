@@ -13,9 +13,12 @@ import os
 
 # Configurar Selenium para ejecutarse en modo normal (navegador visible)
 chrome_options = Options()
-# chrome_options.add_argument("--headless")  # Comentar o eliminar esta línea para que el navegador sea visible
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument('--headless')  # Ejecutar en modo headless
+chrome_options.add_argument('--disable-gpu')  # Necesario para algunos entornos headless
+chrome_options.add_argument('--no-sandbox')  # Necesario para algunos entornos CI/CD
+chrome_options.add_argument('--disable-dev-shm-usage')  # Evitar problemas con recursos de memoria compartida
+chrome_options.add_argument('--window-size=1920x1080')  # Opcional: establecer un tamaño de ventana fijo
+chrome_options.add_argument('--remote-debugging-port=9222')  # Para depuración remota si es necesario
 
 # Inicializar el WebDriver
 driver = webdriver.Chrome(options=chrome_options)
