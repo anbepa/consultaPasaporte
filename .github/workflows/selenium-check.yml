@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-  schedule:
-    - cron: '0 */3 * * *'  # Ejecuta cada 3 horas
+  # schedule:
+  #   - cron: '0 */3 * * *'  # Ejecuta cada 3 horas
 
 jobs:
   run-selenium:
@@ -27,4 +27,4 @@ jobs:
 
       - name: Run the Selenium script
         run: |
-          python Scrips/selenium_test.py
+          python Scripts/selenium_test.py
